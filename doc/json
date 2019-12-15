@@ -1,0 +1,100 @@
+Authentication
+POST http://localhost:3000/auth/authenticate
+{
+	"email" : "marcelu@gmail.com",
+	"password": "123456"
+}
+
+return
+{
+  "user": {
+    "_id": "5df53eb6012bd504c0cb3e33",
+    "name": "Marcelo",
+    "email": "marcelu@gmail.com",
+    "createdAt": "2019-12-14T19:57:42.354Z",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjUzZWI2MDEyYmQ1MDRjMGNiM2UzMyIsImlhdCI6MTU3NjM1NTgyNSwiZXhwIjoxNTc2NDQyMjI1fQ.tNZjzaP1TRSyBIBbkA9AeX5fySXQYCVQ9Pk-CZ1d8Q4"
+}
+
+Register 
+
+pOSt  http://localhost:3000/auth/register
+
+{
+	"name" : "Marcelo",
+	"email" : "marcelugmail.com",
+	"password": "123456"
+}
+
+return 
+{
+  "user": {
+    "_id": "5df546783253ed21f371ec99",
+    "name": "Marcelo",
+    "email": "marcelu22@gmail.com",
+    "createdAt": "2019-12-14T20:30:48.836Z",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjU0Njc4MzI1M2VkMjFmMzcxZWM5OSIsImlhdCI6MTU3NjM1NTQ1MSwiZXhwIjoxNTc2NDQxODUxfQ.s45r9FSYp1N-Izj7kkZVug6IXy01x9KfUhOijPwj9uQ"
+}
+
+
+Forgot Password
+POST http://localhost:3000/auth//forgot_password
+
+{
+	"email" : "marcelugmail.com"
+}
+
+
+Reset Password
+pOST 
+http://localhost:3000/auth/reset_password
+
+{
+	"email" : "marcelos@gmail.com",
+	"password": "12345699",
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjUzZWI2MDEyYmQ1MDRjMGNiM2UzMyIsImlhdCI6MTU3NjM1NTgyNSwiZXhwIjoxNTc2NDQyMjI1fQ.tNZjzaP1TRSyBIBbkA9AeX5fySXQYCVQ9Pk-CZ1d8Q4"
+}
+
+PROJETO
+
+list 
+GET http://localhost:3000/projects/
+
+show 
+GET http://localhost:3000/projects/id
+
+update 
+PUT http://localhost:3000/projects/id
+
+{
+	"name" : "Marcelo",
+	"email" : "marcelos@gmail.com",
+	"password": "123456"
+}
+
+delete 
+DELETE http://localhost:3000/projects/id
+
+
+created
+POST http://localhost:3000/projects/
+
+{
+	"title" : "Novo Projeto",
+	"description" : "Descricao",
+	"tasks": [
+		{
+				"title" : "Novo Projeto1",
+	"assignedTo" : "Descricao1"
+		},
+		{
+				"title" : "Novo Projeto2",
+	"assignedTo" : "Descricao2"
+		}
+	]
+}
+
+return
